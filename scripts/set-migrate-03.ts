@@ -39,7 +39,7 @@ const _components: Address[] = [
 const _units: BigNumberish[] = [
     '25000000000000000000',
     '25000000000000000000',
-    '50000000000000000000'
+    '5000000000000000000'
 ];
 
 async function main(): Promise<any> {
