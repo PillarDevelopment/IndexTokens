@@ -267,15 +267,29 @@ async function main(): Promise<any> {
 
     console.log("Added second component",
     " and his balance", await (await _componentsToken[1].balanceOf(owner.address)).toString(),
-    "components count", await (await setToken.getComponents()).length);
+    "set token second component amount", (await setToken.getPositions())[1].unit.toString(),
+    "components count", await (await setToken.getComponents()).length);    
 
     await getBalances(owner.address, "owner's");
     await getBalances(retrievedSetAddress, "SetToken's");
 
+    await _componentsToken[1].approve(componentManageModule.address, ether(3));    
+
+    await componentManageModule.addToSetToken(
+        retrievedSetAddress, 
+        _componentsToken[1].address,
+        ether(3));
+
+    console.log("Added 3 to second component",
+    " and his balance", (await _componentsToken[1].balanceOf(owner.address)).toString(),
+    "set token second component amount", (await setToken.getPositions())[1].unit.toString(),
+    "components count", (await setToken.getComponents()).length);
+
+    await getBalances(owner.address, "owner's");
+    await getBalances(retrievedSetAddress, "SetToken's");
     
     // redeem the "Set Token"
-    await setToken.approve(controller.address, setTokenOwned);
-    
+    await setToken.approve(controller.address, setTokenOwned);    
     
     await issuanceModule.redeem(
         setToken.address,
