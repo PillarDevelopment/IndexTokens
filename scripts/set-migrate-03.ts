@@ -31,15 +31,18 @@ const setTokenCreator_address = String(process.env.TOKENCREATOR);
 const issuanceModule_address = String(process.env.ISSUANCEMODULE);
 const componentManageModule_address = String(process.env.COMPONENTMANAGEMODULE);
 const _components: Address[] = [
-    
-    '0x577d296678535e4903d59a4c929b718e1d575e0a',
-    '0xe4319c0cd15fc7517fa8414a08b08b5f7bfc0794',
-    '0xc778417e063141139fce010982780140aa0cd5ab '
+    '0x4dbcdf9b62e891a7cec5a2568c3f4faf9e8abe2b',
+    '0x3f392b2eac1772adbd02402c37658d6965db6839',
+    '0x5592ec0cfb4dbc12d3ab100b257153436a1f0fea',
+    '0xb82a765bb22ba51ce8b9a4192786caba429e0d18',
+    '0xd9ba894e0097f8cc2bbc9d24d308b98e36dc6d02'
 ];
 const _units: BigNumberish[] = [
-    '25000000000000000000',
-    '25000000000000000000',
-    '5000000000000000000'
+    '250000',
+    '250000000000000000',
+    '250000000000000000',
+    '250000000000000000',
+    '250000000000000000'
 ];
 
 async function main(): Promise<any> {
@@ -51,35 +54,30 @@ async function main(): Promise<any> {
     
     controller = await ControllerFactory.connect( controller_address, owner.wallet);
     console.log('\ncontroller=', controller.address);
-    
     setTokenCreator = await SetTokenCreatorFactory.connect( setTokenCreator_address, owner.wallet);
     //console.log('setTokenCreator=', setTokenCreator.address);
     
     issuanceModule = BasicIssuanceModuleFactory.connect( issuanceModule_address, owner.wallet);
     await issuanceModule.deployed();
     console.log('issuanceModule=', issuanceModule.address);
-
     componentManageModule = ComponentManageModuleFactory.connect(componentManageModule_address, owner.wallet);
     await componentManageModule.deployed();
     console.log('componentManageModule=', componentManageModule.address);
-    
     const receipt = await setTokenCreator.create(
         _components,
         _units,
         [issuanceModule.address, componentManageModule.address],
         owner.address,
-        'Test WBTC_WETH Index',
-        'wBTCwETHIndex',
+        'Test Index Token1',
+        'IndexToken1',
     );        
     //await timeout(120000);
     //console.log("setTokenCreator.create", "receipt.hash", receipt.hash);
     // wait for complete TX    
     await receipt.wait()
     //console.log("receipt.wait", await receipt.wait());
-
     const retrievedSetAddress = await protocolUtils.getCreatedSetTokenAddress(receipt.hash);
     setToken = await new SetTokenFactory(owner.wallet).attach(retrievedSetAddress);
-
     console.log(
         "\nsettoken adderss=", retrievedSetAddress ,
         "\nsettoken islocked=", await setToken.getComponents(), 
@@ -88,7 +86,6 @@ async function main(): Promise<any> {
         "\ncomponentManageModule isPendingModule=", await setToken.isPendingModule(componentManageModule.address),
         "\ncomponentManageModule isInitializedModule=", await setToken.isInitializedModule(componentManageModule.address)
     );
-    
     /***********************************************************************
      * setToken initialisations
      * 
