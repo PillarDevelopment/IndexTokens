@@ -92,7 +92,7 @@ contract IntegrationRegistry is Ownable {
      *
      * @param  _modules      Array of addresses of the modules associated with integration
      * @param  _names        Array of human readable strings identifying the integration
-     * @param  _adapters     Array of addresses of the adapter contracts to add
+     * @param  _adapters     Array of addresses of the adapter as to add
      */
     function batchAddIntegration(
         address[] memory _modules,
@@ -151,7 +151,7 @@ contract IntegrationRegistry is Ownable {
      *
      * @param  _modules      Array of addresses of the modules associated with integration
      * @param  _names        Array of human readable strings identifying the integration
-     * @param  _adapters     Array of addresses of the adapter contracts to add
+     * @param  _adapters     Array of addresses of the adapter as to add
      */
     function batchEditIntegration(
         address[] memory _modules,

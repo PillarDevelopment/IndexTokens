@@ -1,4 +1,4 @@
-// Dependency file: @openzeppelin/contracts/math/SignedSafeMath.sol
+// Dependency file: @openzeppelin/as/math/SignedSafeMath.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -93,7 +93,7 @@ library SignedSafeMath {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/math/SafeMath.sol
+// Dependency file: @openzeppelin/as/math/SafeMath.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -276,8 +276,8 @@ library SafeMath {
 pragma solidity 0.6.10;
 pragma experimental ABIEncoderV2;
 
-// import { SafeMath } from "@openzeppelin/contracts/math/SafeMath.sol";
-// import { SignedSafeMath } from "@openzeppelin/contracts/math/SignedSafeMath.sol";
+// import { SafeMath } from "@openzeppelin/as/math/SafeMath.sol";
+// import { SignedSafeMath } from "@openzeppelin/as/math/SignedSafeMath.sol";
 
 
 /**

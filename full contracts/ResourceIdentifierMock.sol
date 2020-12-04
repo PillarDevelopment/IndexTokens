@@ -1,4 +1,4 @@
-// Dependency file: @openzeppelin/contracts/token/ERC20/IERC20.sol
+// Dependency file: @openzeppelin/as/token/ERC20/IERC20.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -78,7 +78,7 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-// Dependency file: contracts/interfaces/ISetToken.sol
+// Dependency file: as/interfaces/ISetToken.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -100,7 +100,7 @@ interface IERC20 {
 // pragma solidity 0.6.10;
 // pragma experimental "ABIEncoderV2";
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
 
 /**
  * @title ISetToken
@@ -214,7 +214,7 @@ interface ISetToken is IERC20 {
     function isPendingModule(address _module) external view returns(bool);
     function isLocked() external view returns (bool);
 }
-// Dependency file: contracts/protocol/lib/ResourceIdentifier.sol
+// Dependency file: as/protocol/lib/ResourceIdentifier.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -245,7 +245,7 @@ interface ISetToken is IERC20 {
  * @title ResourceIdentifier
  * @author Set Protocol
  *
- * A collection of utility functions to fetch information related to Resource contracts in the system
+ * A collection of utility functions to fetch information related to Resource as in the system
  */
 library ResourceIdentifier {
 
@@ -280,7 +280,7 @@ library ResourceIdentifier {
         return ISetValuer(_controller.resourceId(SET_VALUER_RESOURCE_ID));
     }
 }
-// Dependency file: contracts/interfaces/ISetValuer.sol
+// Dependency file: as/interfaces/ISetValuer.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -306,7 +306,7 @@ library ResourceIdentifier {
 interface ISetValuer {
     function calculateSetTokenValuation(ISetToken _setToken, address _quoteAsset) external view returns (uint256);
 }
-// Dependency file: contracts/interfaces/IPriceOracle.sol
+// Dependency file: as/interfaces/IPriceOracle.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -340,7 +340,7 @@ interface IPriceOracle {
     function getPrice(address _assetOne, address _assetTwo) external view returns (uint256);
     function masterQuoteAsset() external view returns (address);
 }
-// Dependency file: contracts/interfaces/IIntegrationRegistry.sol
+// Dependency file: as/interfaces/IIntegrationRegistry.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -367,7 +367,7 @@ interface IIntegrationRegistry {
     function getIntegrationAdapterWithHash(address _module, bytes32 _id) external view returns(address);
     function isValidIntegration(address _module, string memory _id) external view returns(bool);
 }
-// Dependency file: contracts/interfaces/IController.sol
+// Dependency file: as/interfaces/IController.sol
 
 /*
     Copyright 2020 Set Labs Inc.

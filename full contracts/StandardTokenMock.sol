@@ -1,4 +1,4 @@
-// Dependency file: @openzeppelin/contracts/utils/Address.sol
+// Dependency file: @openzeppelin/as/utils/Address.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -41,7 +41,7 @@ library Address {
      * `recipient`, forwarding all available gas and reverting on errors.
      *
      * https://eips.ethereum.org/EIPS/eip-1884[EIP1884] increases the gas cost
-     * of certain opcodes, possibly making contracts go over the 2300 gas limit
+     * of certain opcodes, possibly making as go over the 2300 gas limit
      * imposed by `transfer`, making them unable to receive funds via
      * `transfer`. {sendValue} removes this limitation.
      *
@@ -142,7 +142,7 @@ library Address {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/math/SafeMath.sol
+// Dependency file: @openzeppelin/as/math/SafeMath.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -304,7 +304,7 @@ library SafeMath {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/token/ERC20/IERC20.sol
+// Dependency file: @openzeppelin/as/token/ERC20/IERC20.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -384,7 +384,7 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-// Dependency file: @openzeppelin/contracts/GSN/Context.sol
+// Dependency file: @openzeppelin/as/GSN/Context.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -398,7 +398,7 @@ interface IERC20 {
  * paying for execution may not be the actual sender (as far as an application
  * is concerned).
  *
- * This contract is only required for intermediate, library-like contracts.
+ * This contract is only required for intermediate, library-like as.
  */
 abstract contract Context {
     function _msgSender() internal view virtual returns (address payable) {
@@ -411,7 +411,7 @@ abstract contract Context {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/token/ERC20/ERC20.sol
+// Dependency file: @openzeppelin/as/token/ERC20/ERC20.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -697,7 +697,7 @@ contract ERC20 is Context, IERC20 {
      * @dev Sets {decimals} to a value other than the default one of 18.
      *
      * WARNING: This function should only be called from the constructor. Most
-     * applications that interact with token contracts will not expect
+     * applications that interact with token as will not expect
      * {decimals} to ever change, and may work incorrectly if it does.
      */
     function _setupDecimals(uint8 decimals_) internal {
@@ -716,7 +716,7 @@ contract ERC20 is Context, IERC20 {
      * - when `to` is zero, `amount` of ``from``'s tokens will be burned.
      * - `from` and `to` are never both zero.
      *
-     * To learn more about hooks, head to xref:ROOT:extending-contracts.adoc#using-hooks[Using Hooks].
+     * To learn more about hooks, head to xref:ROOT:extending-as.adoc#using-hooks[Using Hooks].
      */
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { }
 }
@@ -741,7 +741,7 @@ contract ERC20 is Context, IERC20 {
 
 pragma solidity 0.6.10;
 
-// import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+// import "@openzeppelin/as/token/ERC20/ERC20.sol";
 
 // mock class using BasicToken
 contract StandardTokenMock is ERC20 {

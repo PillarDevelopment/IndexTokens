@@ -35,7 +35,7 @@ import { ResourceIdentifier } from "./lib/ResourceIdentifier.sol";
  * @title SetValuer
  * @author Set Protocol
  *
- * Contract that returns the valuation of SetTokens using price oracle data used in contracts
+ * Contract that returns the valuation of SetTokens using price oracle data used in as
  * that are external to the system.
  *
  * Note: Prices are returned in preciseUnits (i.e. 18 decimals of precision)

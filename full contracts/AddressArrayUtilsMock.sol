@@ -1,4 +1,4 @@
-// Dependency file: contracts/lib/AddressArrayUtils.sol
+// Dependency file: as/lib/AddressArrayUtils.sol
 
 /*
     Copyright 2020 Set Labs Inc.

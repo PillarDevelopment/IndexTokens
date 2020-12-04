@@ -1,4 +1,4 @@
-// Dependency file: @openzeppelin/contracts/utils/Address.sol
+// Dependency file: @openzeppelin/as/utils/Address.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -41,7 +41,7 @@ library Address {
      * `recipient`, forwarding all available gas and reverting on errors.
      *
      * https://eips.ethereum.org/EIPS/eip-1884[EIP1884] increases the gas cost
-     * of certain opcodes, possibly making contracts go over the 2300 gas limit
+     * of certain opcodes, possibly making as go over the 2300 gas limit
      * imposed by `transfer`, making them unable to receive funds via
      * `transfer`. {sendValue} removes this limitation.
      *
@@ -142,7 +142,7 @@ library Address {
     }
 }
 
-// Dependency file: contracts/interfaces/ISetValuer.sol
+// Dependency file: as/interfaces/ISetValuer.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -168,7 +168,7 @@ library Address {
 interface ISetValuer {
     function calculateSetTokenValuation(ISetToken _setToken, address _quoteAsset) external view returns (uint256);
 }
-// Dependency file: contracts/interfaces/IPriceOracle.sol
+// Dependency file: as/interfaces/IPriceOracle.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -202,7 +202,7 @@ interface IPriceOracle {
     function getPrice(address _assetOne, address _assetTwo) external view returns (uint256);
     function masterQuoteAsset() external view returns (address);
 }
-// Dependency file: contracts/interfaces/IIntegrationRegistry.sol
+// Dependency file: as/interfaces/IIntegrationRegistry.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -229,7 +229,7 @@ interface IIntegrationRegistry {
     function getIntegrationAdapterWithHash(address _module, bytes32 _id) external view returns(address);
     function isValidIntegration(address _module, string memory _id) external view returns(bool);
 }
-// Dependency file: @openzeppelin/contracts/token/ERC20/SafeERC20.sol
+// Dependency file: @openzeppelin/as/token/ERC20/SafeERC20.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -307,7 +307,7 @@ library SafeERC20 {
     }
 }
 
-// Dependency file: contracts/protocol/lib/ResourceIdentifier.sol
+// Dependency file: as/protocol/lib/ResourceIdentifier.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -338,7 +338,7 @@ library SafeERC20 {
  * @title ResourceIdentifier
  * @author Set Protocol
  *
- * A collection of utility functions to fetch information related to Resource contracts in the system
+ * A collection of utility functions to fetch information related to Resource as in the system
  */
 library ResourceIdentifier {
 
@@ -373,7 +373,7 @@ library ResourceIdentifier {
         return ISetValuer(_controller.resourceId(SET_VALUER_RESOURCE_ID));
     }
 }
-// Dependency file: contracts/protocol/lib/Invoke.sol
+// Dependency file: as/protocol/lib/Invoke.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -395,8 +395,8 @@ library ResourceIdentifier {
 
 // pragma solidity 0.6.10;
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-// import { SafeMath } from "@openzeppelin/contracts/math/SafeMath.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
+// import { SafeMath } from "@openzeppelin/as/math/SafeMath.sol";
 
 // import { ISetToken } from "../../interfaces/ISetToken.sol";
 
@@ -512,7 +512,7 @@ library Invoke {
         _setToken.invoke(_weth, _quantity, callData);
     }
 }
-// Dependency file: contracts/interfaces/IModule.sol
+// Dependency file: as/interfaces/IModule.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -547,7 +547,7 @@ interface IModule {
      */
     function removeModule() external;
 }
-// Dependency file: contracts/lib/ExplicitERC20.sol
+// Dependency file: as/lib/ExplicitERC20.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -569,9 +569,9 @@ interface IModule {
 
 // pragma solidity 0.6.10;
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-// import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
-// import { SafeMath } from "@openzeppelin/contracts/math/SafeMath.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
+// import { SafeERC20 } from "@openzeppelin/as/token/ERC20/SafeERC20.sol";
+// import { SafeMath } from "@openzeppelin/as/math/SafeMath.sol";
 
 /**
  * @title ExplicitERC20
@@ -621,7 +621,7 @@ library ExplicitERC20 {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/token/ERC20/IERC20.sol
+// Dependency file: @openzeppelin/as/token/ERC20/IERC20.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -701,7 +701,7 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-// Dependency file: contracts/lib/PreciseUnitMath.sol
+// Dependency file: as/lib/PreciseUnitMath.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -724,8 +724,8 @@ interface IERC20 {
 // pragma solidity 0.6.10;
 // pragma experimental ABIEncoderV2;
 
-// import { SafeMath } from "@openzeppelin/contracts/math/SafeMath.sol";
-// import { SignedSafeMath } from "@openzeppelin/contracts/math/SignedSafeMath.sol";
+// import { SafeMath } from "@openzeppelin/as/math/SafeMath.sol";
+// import { SignedSafeMath } from "@openzeppelin/as/math/SignedSafeMath.sol";
 
 
 /**
@@ -893,7 +893,7 @@ library PreciseUnitMath {
         return result;
     }
 }
-// Dependency file: contracts/protocol/lib/ModuleBase.sol
+// Dependency file: as/protocol/lib/ModuleBase.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -915,7 +915,7 @@ library PreciseUnitMath {
 
 // pragma solidity 0.6.10;
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
 
 // import { ExplicitERC20 } from "../../lib/ExplicitERC20.sol";
 // import { IController } from "../../interfaces/IController.sol";
@@ -1078,7 +1078,7 @@ abstract contract ModuleBase is IModule {
         return keccak256(bytes(_name));
     }
 }
-// Dependency file: contracts/interfaces/ISetToken.sol
+// Dependency file: as/interfaces/ISetToken.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -1100,7 +1100,7 @@ abstract contract ModuleBase is IModule {
 // pragma solidity 0.6.10;
 // pragma experimental "ABIEncoderV2";
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
 
 /**
  * @title ISetToken
@@ -1214,7 +1214,7 @@ interface ISetToken is IERC20 {
     function isPendingModule(address _module) external view returns(bool);
     function isLocked() external view returns (bool);
 }
-// Dependency file: contracts/interfaces/IController.sol
+// Dependency file: as/interfaces/IController.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -1244,7 +1244,7 @@ interface IController {
     function isSystemContract(address _contractAddress) external view returns (bool);
     function resourceId(uint256 _id) external view returns(address);
 }
-// Dependency file: @openzeppelin/contracts/math/SignedSafeMath.sol
+// Dependency file: @openzeppelin/as/math/SignedSafeMath.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -1339,7 +1339,7 @@ library SignedSafeMath {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/math/SafeMath.sol
+// Dependency file: @openzeppelin/as/math/SafeMath.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -1501,7 +1501,7 @@ library SafeMath {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/utils/SafeCast.sol
+// Dependency file: @openzeppelin/as/utils/SafeCast.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -1715,7 +1715,7 @@ library SafeCast {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/utils/ReentrancyGuard.sol
+// Dependency file: @openzeppelin/as/utils/ReentrancyGuard.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -1801,10 +1801,10 @@ contract ReentrancyGuard {
 pragma solidity 0.6.10;
 pragma experimental "ABIEncoderV2";
 
-// import { ReentrancyGuard } from "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
-// import { SafeCast } from "@openzeppelin/contracts/utils/SafeCast.sol";
-// import { SafeMath } from "@openzeppelin/contracts/math/SafeMath.sol";
-// import { SignedSafeMath } from "@openzeppelin/contracts/math/SignedSafeMath.sol";
+// import { ReentrancyGuard } from "@openzeppelin/as/utils/ReentrancyGuard.sol";
+// import { SafeCast } from "@openzeppelin/as/utils/SafeCast.sol";
+// import { SafeMath } from "@openzeppelin/as/math/SafeMath.sol";
+// import { SignedSafeMath } from "@openzeppelin/as/math/SignedSafeMath.sol";
 
 // import { IController } from "../../interfaces/IController.sol";
 // import { ISetToken } from "../../interfaces/ISetToken.sol";

@@ -27,7 +27,7 @@ import { ISetValuer } from "../../interfaces/ISetValuer.sol";
  * @title ResourceIdentifier
  * @author Set Protocol
  *
- * A collection of utility functions to fetch information related to Resource contracts in the system
+ * A collection of utility functions to fetch information related to Resource as in the system
  */
 library ResourceIdentifier {
 

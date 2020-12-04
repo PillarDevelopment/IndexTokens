@@ -1,4 +1,4 @@
-// Dependency file: @openzeppelin/contracts/token/ERC20/IERC20.sol
+// Dependency file: @openzeppelin/as/token/ERC20/IERC20.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -78,7 +78,7 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-// Dependency file: contracts/interfaces/ISetToken.sol
+// Dependency file: as/interfaces/ISetToken.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -100,7 +100,7 @@ interface IERC20 {
 // pragma solidity 0.6.10;
 // pragma experimental "ABIEncoderV2";
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
 
 /**
  * @title ISetToken

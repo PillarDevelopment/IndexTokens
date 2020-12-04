@@ -1,4 +1,4 @@
-// Dependency file: contracts/lib/PreciseUnitMath.sol
+// Dependency file: as/lib/PreciseUnitMath.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -21,8 +21,8 @@
 // pragma solidity 0.6.10;
 // pragma experimental ABIEncoderV2;
 
-// import { SafeMath } from "@openzeppelin/contracts/math/SafeMath.sol";
-// import { SignedSafeMath } from "@openzeppelin/contracts/math/SignedSafeMath.sol";
+// import { SafeMath } from "@openzeppelin/as/math/SafeMath.sol";
+// import { SignedSafeMath } from "@openzeppelin/as/math/SignedSafeMath.sol";
 
 
 /**
@@ -190,7 +190,7 @@ library PreciseUnitMath {
         return result;
     }
 }
-// Dependency file: @openzeppelin/contracts/math/SignedSafeMath.sol
+// Dependency file: @openzeppelin/as/math/SignedSafeMath.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -285,7 +285,7 @@ library SignedSafeMath {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/math/SafeMath.sol
+// Dependency file: @openzeppelin/as/math/SafeMath.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -447,7 +447,7 @@ library SafeMath {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/utils/SafeCast.sol
+// Dependency file: @openzeppelin/as/utils/SafeCast.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -661,7 +661,7 @@ library SafeCast {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/token/ERC20/IERC20.sol
+// Dependency file: @openzeppelin/as/token/ERC20/IERC20.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -741,7 +741,7 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-// Dependency file: contracts/protocol/lib/Position.sol
+// Dependency file: as/protocol/lib/Position.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -764,10 +764,10 @@ interface IERC20 {
 // pragma solidity 0.6.10;
 // pragma experimental "ABIEncoderV2";
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-// import { SafeCast } from "@openzeppelin/contracts/utils/SafeCast.sol";
-// import { SafeMath } from "@openzeppelin/contracts/math/SafeMath.sol";
-// import { SignedSafeMath } from "@openzeppelin/contracts/math/SignedSafeMath.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
+// import { SafeCast } from "@openzeppelin/as/utils/SafeCast.sol";
+// import { SafeMath } from "@openzeppelin/as/math/SafeMath.sol";
+// import { SignedSafeMath } from "@openzeppelin/as/math/SignedSafeMath.sol";
 
 // import { ISetToken } from "../../interfaces/ISetToken.sol";
 // import { PreciseUnitMath } from "../../lib/PreciseUnitMath.sol";
@@ -998,7 +998,7 @@ library Position {
     }
 }
 
-// Dependency file: contracts/interfaces/ISetToken.sol
+// Dependency file: as/interfaces/ISetToken.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -1020,7 +1020,7 @@ library Position {
 // pragma solidity 0.6.10;
 // pragma experimental "ABIEncoderV2";
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
 
 /**
  * @title ISetToken

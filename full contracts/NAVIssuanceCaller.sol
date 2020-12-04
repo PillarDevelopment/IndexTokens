@@ -1,4 +1,4 @@
-// Dependency file: contracts/interfaces/ISetToken.sol
+// Dependency file: as/interfaces/ISetToken.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -20,7 +20,7 @@
 // pragma solidity 0.6.10;
 // pragma experimental "ABIEncoderV2";
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
 
 /**
  * @title ISetToken
@@ -134,7 +134,7 @@ interface ISetToken is IERC20 {
     function isPendingModule(address _module) external view returns(bool);
     function isLocked() external view returns (bool);
 }
-// Dependency file: contracts/interfaces/INAVIssuanceModule.sol
+// Dependency file: as/interfaces/INAVIssuanceModule.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -176,7 +176,7 @@ interface INAVIssuanceModule {
     ) 
         external;
 }
-// Dependency file: @openzeppelin/contracts/token/ERC20/IERC20.sol
+// Dependency file: @openzeppelin/as/token/ERC20/IERC20.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -277,7 +277,7 @@ interface IERC20 {
 pragma solidity 0.6.10;
 pragma experimental "ABIEncoderV2";
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
 
 // import { INAVIssuanceModule } from "../../../interfaces/INAVIssuanceModule.sol";
 // import { ISetToken } from "../../../interfaces/ISetToken.sol";

@@ -1,4 +1,4 @@
-// Dependency file: @openzeppelin/contracts/GSN/Context.sol
+// Dependency file: @openzeppelin/as/GSN/Context.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -12,7 +12,7 @@
  * paying for execution may not be the actual sender (as far as an application
  * is concerned).
  *
- * This contract is only required for intermediate, library-like contracts.
+ * This contract is only required for intermediate, library-like as.
  */
 abstract contract Context {
     function _msgSender() internal view virtual returns (address payable) {
@@ -25,7 +25,7 @@ abstract contract Context {
     }
 }
 
-// Dependency file: contracts/lib/AddressArrayUtils.sol
+// Dependency file: as/lib/AddressArrayUtils.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -142,7 +142,7 @@ library AddressArrayUtils {
         return (newAddresses, A[index]);
     }
 }
-// Dependency file: @openzeppelin/contracts/access/Ownable.sol
+// Dependency file: @openzeppelin/as/access/Ownable.sol
 
 
 // pragma solidity ^0.6.0;
@@ -212,7 +212,7 @@ contract Ownable is Context {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/token/ERC20/IERC20.sol
+// Dependency file: @openzeppelin/as/token/ERC20/IERC20.sol
 
 
 // pragma solidity ^0.6.0;
@@ -310,8 +310,8 @@ interface IERC20 {
 
 pragma solidity 0.6.10;
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-// import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
+// import { Ownable } from "@openzeppelin/as/access/Ownable.sol";
 // import { AddressArrayUtils } from "../lib/AddressArrayUtils.sol";
 
 
@@ -319,7 +319,7 @@ pragma solidity 0.6.10;
  * @title Controller
  * @author Set Protocol
  *
- * Contract that houses state for approvals and system contracts such as added Sets,
+ * Contract that houses state for approvals and system as such as added Sets,
  * modules, factories, resources (like price oracles), and protocol fee configurations.
  */
 contract Controller is Ownable {
@@ -375,7 +375,7 @@ contract Controller is Ownable {
     // Fee is denominated in precise unit percentages (100% = 1e18, 1% = 1e16)
     mapping(address => mapping(uint256 => uint256)) public fees;
 
-    // Mapping of resource ID to resource address, which allows contracts to fetch the correct
+    // Mapping of resource ID to resource address, which allows as to fetch the correct
     // resource while providing an ID
     mapping(uint256 => address) public resourceId;
 
@@ -400,7 +400,7 @@ contract Controller is Ownable {
 
     /**
      * Initializes any predeployed factories, modules, and resources post deployment. Note: This function can
-     * only be called by the owner once to batch initialize the initial system contracts.
+     * only be called by the owner once to batch initialize the initial system as.
      *
      * @param _factories             List of factories to add
      * @param _modules               List of modules to add

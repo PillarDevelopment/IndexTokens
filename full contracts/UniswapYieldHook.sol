@@ -1,4 +1,4 @@
-// Dependency file: @openzeppelin/contracts/token/ERC20/IERC20.sol
+// Dependency file: @openzeppelin/as/token/ERC20/IERC20.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -78,7 +78,7 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-// Dependency file: @openzeppelin/contracts/GSN/Context.sol
+// Dependency file: @openzeppelin/as/GSN/Context.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -92,7 +92,7 @@ interface IERC20 {
  * paying for execution may not be the actual sender (as far as an application
  * is concerned).
  *
- * This contract is only required for intermediate, library-like contracts.
+ * This contract is only required for intermediate, library-like as.
  */
 abstract contract Context {
     function _msgSender() internal view virtual returns (address payable) {
@@ -105,7 +105,7 @@ abstract contract Context {
     }
 }
 
-// Dependency file: contracts/interfaces/ISetToken.sol
+// Dependency file: as/interfaces/ISetToken.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -127,7 +127,7 @@ abstract contract Context {
 // pragma solidity 0.6.10;
 // pragma experimental "ABIEncoderV2";
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
 
 /**
  * @title ISetToken
@@ -241,7 +241,7 @@ interface ISetToken is IERC20 {
     function isPendingModule(address _module) external view returns(bool);
     function isLocked() external view returns (bool);
 }
-// Dependency file: contracts/interfaces/INAVIssuanceHook.sol
+// Dependency file: as/interfaces/INAVIssuanceHook.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -282,7 +282,7 @@ interface INAVIssuanceHook {
     )
         external;
 }
-// Dependency file: contracts/lib/AddressArrayUtils.sol
+// Dependency file: as/lib/AddressArrayUtils.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -400,7 +400,7 @@ library AddressArrayUtils {
         return (newAddresses, A[index]);
     }
 }
-// Dependency file: @openzeppelin/contracts/access/Ownable.sol
+// Dependency file: @openzeppelin/as/access/Ownable.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -492,7 +492,7 @@ contract Ownable is Context {
 pragma solidity 0.6.10;
 pragma experimental "ABIEncoderV2";
 
-// import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
+// import { Ownable } from "@openzeppelin/as/access/Ownable.sol";
 
 // import { AddressArrayUtils } from "../lib/AddressArrayUtils.sol";
 // import { INAVIssuanceHook } from "../interfaces/INAVIssuanceHook.sol";

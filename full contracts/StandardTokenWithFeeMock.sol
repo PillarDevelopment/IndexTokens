@@ -1,4 +1,4 @@
-// Dependency file: @openzeppelin/contracts/math/SafeMath.sol
+// Dependency file: @openzeppelin/as/math/SafeMath.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -180,7 +180,7 @@ library SafeMath {
 pragma solidity 0.6.10;
 
 
-// import "@openzeppelin/contracts/math/SafeMath.sol";
+// import "@openzeppelin/as/math/SafeMath.sol";
 
 
 // mock class using BasicToken

@@ -1,4 +1,4 @@
-// Dependency file: @openzeppelin/contracts/math/SafeMath.sol
+// Dependency file: @openzeppelin/as/math/SafeMath.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -160,7 +160,7 @@ library SafeMath {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/token/ERC20/IERC20.sol
+// Dependency file: @openzeppelin/as/token/ERC20/IERC20.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -240,7 +240,7 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-// Dependency file: contracts/protocol/lib/Invoke.sol
+// Dependency file: as/protocol/lib/Invoke.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -262,8 +262,8 @@ interface IERC20 {
 
 // pragma solidity 0.6.10;
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-// import { SafeMath } from "@openzeppelin/contracts/math/SafeMath.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
+// import { SafeMath } from "@openzeppelin/as/math/SafeMath.sol";
 
 // import { ISetToken } from "../../interfaces/ISetToken.sol";
 
@@ -379,7 +379,7 @@ library Invoke {
         _setToken.invoke(_weth, _quantity, callData);
     }
 }
-// Dependency file: contracts/interfaces/ISetToken.sol
+// Dependency file: as/interfaces/ISetToken.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -401,7 +401,7 @@ library Invoke {
 // pragma solidity 0.6.10;
 // pragma experimental "ABIEncoderV2";
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
 
 /**
  * @title ISetToken

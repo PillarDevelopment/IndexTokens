@@ -1,4 +1,4 @@
-// Dependency file: @openzeppelin/contracts/GSN/Context.sol
+// Dependency file: @openzeppelin/as/GSN/Context.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -12,7 +12,7 @@
  * paying for execution may not be the actual sender (as far as an application
  * is concerned).
  *
- * This contract is only required for intermediate, library-like contracts.
+ * This contract is only required for intermediate, library-like as.
  */
 abstract contract Context {
     function _msgSender() internal view virtual returns (address payable) {
@@ -25,7 +25,7 @@ abstract contract Context {
     }
 }
 
-// Dependency file: contracts/interfaces/IOracle.sol
+// Dependency file: as/interfaces/IOracle.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -60,7 +60,7 @@ interface IOracle {
      */
     function read() external view returns (uint256);
 }
-// Dependency file: @openzeppelin/contracts/math/SafeMath.sol
+// Dependency file: @openzeppelin/as/math/SafeMath.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -222,7 +222,7 @@ library SafeMath {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/access/Ownable.sol
+// Dependency file: @openzeppelin/as/access/Ownable.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -313,8 +313,8 @@ contract Ownable is Context {
 
 pragma solidity 0.6.10;
 
-// import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
-// import { SafeMath } from "@openzeppelin/contracts/math/SafeMath.sol";
+// import { Ownable } from "@openzeppelin/as/access/Ownable.sol";
+// import { SafeMath } from "@openzeppelin/as/math/SafeMath.sol";
 
 // import { IOracle } from "../interfaces/IOracle.sol";
 

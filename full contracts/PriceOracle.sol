@@ -1,4 +1,4 @@
-// Dependency file: @openzeppelin/contracts/math/SignedSafeMath.sol
+// Dependency file: @openzeppelin/as/math/SignedSafeMath.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -93,7 +93,7 @@ library SignedSafeMath {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/math/SafeMath.sol
+// Dependency file: @openzeppelin/as/math/SafeMath.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -255,7 +255,7 @@ library SafeMath {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/GSN/Context.sol
+// Dependency file: @openzeppelin/as/GSN/Context.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -269,7 +269,7 @@ library SafeMath {
  * paying for execution may not be the actual sender (as far as an application
  * is concerned).
  *
- * This contract is only required for intermediate, library-like contracts.
+ * This contract is only required for intermediate, library-like as.
  */
 abstract contract Context {
     function _msgSender() internal view virtual returns (address payable) {
@@ -282,7 +282,7 @@ abstract contract Context {
     }
 }
 
-// Dependency file: contracts/lib/PreciseUnitMath.sol
+// Dependency file: as/lib/PreciseUnitMath.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -305,8 +305,8 @@ abstract contract Context {
 // pragma solidity 0.6.10;
 // pragma experimental ABIEncoderV2;
 
-// import { SafeMath } from "@openzeppelin/contracts/math/SafeMath.sol";
-// import { SignedSafeMath } from "@openzeppelin/contracts/math/SignedSafeMath.sol";
+// import { SafeMath } from "@openzeppelin/as/math/SafeMath.sol";
+// import { SignedSafeMath } from "@openzeppelin/as/math/SignedSafeMath.sol";
 
 
 /**
@@ -474,7 +474,7 @@ library PreciseUnitMath {
         return result;
     }
 }
-// Dependency file: contracts/interfaces/IOracleAdapter.sol
+// Dependency file: as/interfaces/IOracleAdapter.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -514,7 +514,7 @@ interface IOracleAdapter {
      */
     function getPrice(address _assetOne, address _assetTwo) external view returns (bool, uint256);
 }
-// Dependency file: contracts/interfaces/IOracle.sol
+// Dependency file: as/interfaces/IOracle.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -549,7 +549,7 @@ interface IOracle {
      */
     function read() external view returns (uint256);
 }
-// Dependency file: contracts/interfaces/IController.sol
+// Dependency file: as/interfaces/IController.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -579,7 +579,7 @@ interface IController {
     function isSystemContract(address _contractAddress) external view returns (bool);
     function resourceId(uint256 _id) external view returns(address);
 }
-// Dependency file: contracts/lib/AddressArrayUtils.sol
+// Dependency file: as/lib/AddressArrayUtils.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -697,7 +697,7 @@ library AddressArrayUtils {
         return (newAddresses, A[index]);
     }
 }
-// Dependency file: @openzeppelin/contracts/access/Ownable.sol
+// Dependency file: @openzeppelin/as/access/Ownable.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -789,7 +789,7 @@ contract Ownable is Context {
 pragma solidity 0.6.10;
 pragma experimental "ABIEncoderV2";
 
-// import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
+// import { Ownable } from "@openzeppelin/as/access/Ownable.sol";
 
 // import { AddressArrayUtils } from "../lib/AddressArrayUtils.sol";
 // import { IController } from "../interfaces/IController.sol";

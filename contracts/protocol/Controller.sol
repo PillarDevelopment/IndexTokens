@@ -27,7 +27,7 @@ import { AddressArrayUtils } from "../lib/AddressArrayUtils.sol";
  * @title Controller
  * @author Set Protocol
  *
- * Contract that houses state for approvals and system contracts such as added Sets,
+ * Contract that houses state for approvals and system as such as added Sets,
  * modules, factories, resources (like price oracles), and protocol fee configurations.
  */
 contract Controller is Ownable {
@@ -83,7 +83,7 @@ contract Controller is Ownable {
     // Fee is denominated in precise unit percentages (100% = 1e18, 1% = 1e16)
     mapping(address => mapping(uint256 => uint256)) public fees;
 
-    // Mapping of resource ID to resource address, which allows contracts to fetch the correct
+    // Mapping of resource ID to resource address, which allows as to fetch the correct
     // resource while providing an ID
     mapping(uint256 => address) public resourceId;
 
@@ -108,7 +108,7 @@ contract Controller is Ownable {
 
     /**
      * Initializes any predeployed factories, modules, and resources post deployment. Note: This function can
-     * only be called by the owner once to batch initialize the initial system contracts.
+     * only be called by the owner once to batch initialize the initial system as.
      *
      * @param _factories             List of factories to add
      * @param _modules               List of modules to add

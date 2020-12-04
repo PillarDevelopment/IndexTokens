@@ -1,4 +1,4 @@
-// Dependency file: @openzeppelin/contracts/utils/Address.sol
+// Dependency file: @openzeppelin/as/utils/Address.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -41,7 +41,7 @@ library Address {
      * `recipient`, forwarding all available gas and reverting on errors.
      *
      * https://eips.ethereum.org/EIPS/eip-1884[EIP1884] increases the gas cost
-     * of certain opcodes, possibly making contracts go over the 2300 gas limit
+     * of certain opcodes, possibly making as go over the 2300 gas limit
      * imposed by `transfer`, making them unable to receive funds via
      * `transfer`. {sendValue} removes this limitation.
      *
@@ -142,7 +142,7 @@ library Address {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/math/SafeMath.sol
+// Dependency file: @openzeppelin/as/math/SafeMath.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -304,7 +304,7 @@ library SafeMath {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/token/ERC20/SafeERC20.sol
+// Dependency file: @openzeppelin/as/token/ERC20/SafeERC20.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -382,7 +382,7 @@ library SafeERC20 {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/token/ERC20/IERC20.sol
+// Dependency file: @openzeppelin/as/token/ERC20/IERC20.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -462,7 +462,7 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-// Dependency file: contracts/lib/ExplicitERC20.sol
+// Dependency file: as/lib/ExplicitERC20.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -484,9 +484,9 @@ interface IERC20 {
 
 // pragma solidity 0.6.10;
 
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-// import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
-// import { SafeMath } from "@openzeppelin/contracts/math/SafeMath.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
+// import { SafeERC20 } from "@openzeppelin/as/token/ERC20/SafeERC20.sol";
+// import { SafeMath } from "@openzeppelin/as/math/SafeMath.sol";
 
 /**
  * @title ExplicitERC20
@@ -558,7 +558,7 @@ pragma solidity 0.6.10;
 pragma experimental "ABIEncoderV2";
 
 // import { ExplicitERC20 } from "../lib/ExplicitERC20.sol";
-// import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+// import { IERC20 } from "@openzeppelin/as/token/ERC20/IERC20.sol";
 
 contract ExplicitERC20Mock {
     

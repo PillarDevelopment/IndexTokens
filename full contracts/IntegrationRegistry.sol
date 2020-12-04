@@ -1,4 +1,4 @@
-// Dependency file: @openzeppelin/contracts/GSN/Context.sol
+// Dependency file: @openzeppelin/as/GSN/Context.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -12,7 +12,7 @@
  * paying for execution may not be the actual sender (as far as an application
  * is concerned).
  *
- * This contract is only required for intermediate, library-like contracts.
+ * This contract is only required for intermediate, library-like as.
  */
 abstract contract Context {
     function _msgSender() internal view virtual returns (address payable) {
@@ -25,7 +25,7 @@ abstract contract Context {
     }
 }
 
-// Dependency file: @openzeppelin/contracts/access/Ownable.sol
+// Dependency file: @openzeppelin/as/access/Ownable.sol
 
 // SPDX-License-Identifier: MIT
 
@@ -96,7 +96,7 @@ contract Ownable is Context {
     }
 }
 
-// Dependency file: contracts/interfaces/IController.sol
+// Dependency file: as/interfaces/IController.sol
 
 /*
     Copyright 2020 Set Labs Inc.
@@ -148,7 +148,7 @@ pragma solidity 0.6.10;
 pragma experimental ABIEncoderV2;
 
 // import { IController } from "../interfaces/IController.sol";
-// import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
+// import { Ownable } from "@openzeppelin/as/access/Ownable.sol";
 
 /**
  * @title IntegrationRegistry
@@ -220,7 +220,7 @@ contract IntegrationRegistry is Ownable {
      *
      * @param  _modules      Array of addresses of the modules associated with integration
      * @param  _names        Array of human readable strings identifying the integration
-     * @param  _adapters     Array of addresses of the adapter contracts to add
+     * @param  _adapters     Array of addresses of the adapter as to add
      */
     function batchAddIntegration(
         address[] memory _modules,
@@ -279,7 +279,7 @@ contract IntegrationRegistry is Ownable {
      *
      * @param  _modules      Array of addresses of the modules associated with integration
      * @param  _names        Array of human readable strings identifying the integration
-     * @param  _adapters     Array of addresses of the adapter contracts to add
+     * @param  _adapters     Array of addresses of the adapter as to add
      */
     function batchEditIntegration(
         address[] memory _modules,

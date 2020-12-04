@@ -69,7 +69,7 @@ export const getExpectedIssuePositionUnit = (
   const numerator = preciseMul(previousSupply, previousUnits).add(issueQuantitySubFees);
   const newPositionUnit = preciseDiv(numerator, currentSupply);
 
-  // Adjust for rounding on the contracts when converting between real and virtual units
+  // Adjust for rounding on the as when converting between real and virtual units
   const roundDownPositionUnit = preciseMul(newPositionUnit, newPositionMultiplier);
   return preciseDiv(roundDownPositionUnit, newPositionMultiplier);
 };
@@ -139,7 +139,7 @@ export const getExpectedRedeemPositionUnit = (
   // (Previous supply * previous units - reserveQuantityToRedeem) / current supply
   const numerator = preciseMul(previousSupply, previousUnits).sub(totalReserveBalance);
   const newPositionUnit = preciseDiv(numerator, currentSupply);
-  // Adjust for rounding on the contracts when converting between real and virtual units
+  // Adjust for rounding on the as when converting between real and virtual units
   const roundDownPositionUnit = preciseMul(newPositionUnit, newPositionMultiplier);
   return preciseDiv(roundDownPositionUnit, newPositionMultiplier);
 };

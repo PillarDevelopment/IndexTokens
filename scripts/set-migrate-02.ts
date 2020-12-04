@@ -2,7 +2,7 @@ import 'module-alias/register';
 import * as dotenv from "dotenv";
 
 /**
- * deploy contracts: 
+ * deploy as:
  * controller must be set in scripts: #3, #5 
  * setTokenCreator must be set in script #3
  * issuanceModule must be set in scripts: #3, #4, #5
